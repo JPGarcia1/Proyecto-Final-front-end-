@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuHábitat</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/json.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-brand">
+            <a href="#header-brand">
+                <h1>TuHábitat</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inmuebles.html">Propiedades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="banner-cap">
+            <h2>Bienvenido a TuHábitat</h2>
+            <p>Encuentre el inmueble de sus sueños</p>
+        </div>
+    </section>
+    <section class="search">
+        <div class="search-form-div">
+            <h2>Buscar inmuebles</h2>
+            <form action="">
+                <div class="search-div">
+                    <label>Tipo inmueble</label>
+                    <select name="tipoInmueble" id="tipoInmueble">
+                        <option value="">-</option>
+                        <option value="">Apartamento</option>
+                        <option value="">Casa</option>
+                    </select>
+                </div>
+                <div class="search-div">
+                    <label>Habitaciones</label>
+                    <select name="habitacion" id="habitacion">
+                        <option value="">-</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div class="search-div">
+                    <label>Localidad</label>
+                    <select name="habitacion" id="habitacion">
+                        <option value="">-</option>
+                        <option value="">Engativa</option>
+                        <option value="">Kennedy</option>
+                        <option value="">Usaquen</option>
+                    </select>
+                </div>
+                <div class="search-div">
+                    <label>Precio</label>
+                    <output class="price-output" for="price">COP</output>
+                    <input type="range" name="price" id="price" min="100000000" max="500000000" step="5000000"
+                        value="500000000">
+                </div>
+                <div class="search-div">
+                    <label>Área m2</label>
+                    <output class="" for="">.</output>
+                    <input type="range" name="area" id="area" min="0" max="200" step="5" value="200">
+                </div>
+                <div class="search-div">
+                    <button type="">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="about">
+        <h2>Inmuebles</h2>
+        <article class="about-div">
+            <img src="" alt="">
+            <h3>Casa 3Hab 2Baños Cocina Patio</h3>
+            <p>Precio</p>
+            <a href="">Ver detalles</a>
+        </article>
+        <article class="about-div">
+            <img src="" alt="">
+            <h3>Casa 3Hab 2Baños Cocina Patio</h3>
+            <p>Precio</p>
+            <a href="">Ver detalles</a>
+        </article>
+        <article class="about-div">
+            <img src="" alt="">
+            <h3>Casa 3Hab 2Baños Cocina Patio</h3>
+            <p>Precio</p>
+            <a href="">Ver detalles</a>
+        </article>
+        <article class="about-div">
+            <img src="" alt="">
+            <h3>Casa 3Hab 2Baños Cocina Patio</h3>
+            <p>Precio</p>
+            <a href="">Ver detalles</a>
+        </article>
+        <article class="about-div">
+            <img src="" alt="">
+            <h3>Casa 3Hab 2Baños Cocina Patio</h3>
+            <p>Precio</p>
+            <a href="">Ver detalles</a>
+        </article>
+        <article class="about-div">
+            <img src="" alt="">
+            <h3>Casa 3Hab 2Baños Cocina Patio</h3>
+            <p>Precio</p>
+            <a href="">Ver detalles</a>
+        </article>
+    </section>
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form action="">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 TuHábitat. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script>
+    const price = document.querySelector("#price");
+    const output = document.querySelector(".price-output");
+
+    output.textContent = price.value;
+
+    price.addEventListener("input", function () {
+        output.textContent = price.value;
+    });
+</script>
+
+</html>
