@@ -68,11 +68,11 @@ nav ul li a:hover {
 }
 
 .banner {
-    height: 65vh;
+    height: 50vh;
     width: 100%;
 
     background-image: url(/img/home.jpg);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -106,36 +106,33 @@ nav ul li a:hover {
 .search {
     height: auto;
     width: auto;
-    padding: 5em 20%;
+    padding: 6em 20%;
 
     background-color: rgb(255, 255, 255);
 }
 
-.search-form-div {
-    border: 1px solid #333;
+.search-border {
+    border: 2px solid #333;
     border-radius: 10px;
 }
 
 .search h2 {
     margin: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-
+    padding-top: 1.5em;
     text-align: center;
     font-size: 1.8em;
     color: rgb(50, 50, 50);
 }
 
 .search form {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: calc( 100%/3 - 2em) calc( 100%/3 - 2em) calc( 100%/3 - 2em);
     justify-content: space-between;
-    padding: 2em;
+    padding: 3em;
 }
 
 .search-div {
     margin-bottom: 20px;
-    width: calc( 100%/3 - 3em);
 }
 
 .search-div label {
@@ -181,9 +178,6 @@ nav ul li a:hover {
 }
 
 .search-div button:hover {
-    height: 40px;
-    width: 100%;
-    margin-top: 8%;
     background-color: rgb(235, 235, 235);
     color: rgb(50, 50, 50);
 }
@@ -240,9 +234,11 @@ footer {
 /* Diseño responsivo */
 
 @media  (max-width: 1024px) {
-    .search-div {
-        margin-bottom: 20px;
-        width: calc( 100%/2 - 2em );
+    .search form {
+        display: grid;
+        grid-template-columns: calc( 100%/2 - 1.5em) calc( 100%/2 - 1.5em );
+        justify-content: space-between;
+        padding: 2.5em;
     }
 }
 
@@ -250,9 +246,10 @@ footer {
     .search form {
         display: flex;
         flex-direction: column;
+        padding: 2em;
     }
     .search-div {
         margin-bottom: 20px;
-        width: calc( 100% );
+        width: 100%;
     }
 }
